@@ -1,0 +1,39 @@
+Common commands for w266
+
+#gcp
+tmetz@berkeley.edu
+
+
+### project vm
+gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" --ssh-flag="-L 6006:127.0.0.1:6006" travismetz@project
+conda activate project
+jupyter notebook --port=8896
+
+gcloud compute ssh travismetz@project
+(or could do trmetz as well - trmetz is root but does not have conda installed etc)
+
+ssh -i /Users/travismetz/.ssh/google_compute_engine travismetz@35.221.29.41
+(manual intervention vs using gcloud compute ssh)
+(can use this for vs code ssh)
+(needed to add public key to vm instance online at google compute - public key is google_compute_engine.pub)
+(I had to change key in known_hosts at one point by deleting old one)
+
+gcloud compute ssh -ssh-flag="-L 8896:127.0.0.1:8896" --ssh-flag="-L 6006:127.0.0.1:6006" travismetz@project
+
+
+#ssh into vm - pw is a3 - project name is w266
+gcloud compute ssh tmetz@w266
+
+#this opens up ports so can use jupyter notebook from local browser on 8896
+gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" --ssh-flag="-L 6006:127.0.0.1:6006" tmetz@w266
+tmux new-session -s notebook
+
+#The latest html or json file in ~/.local/share/jupyter/runtime has the token/code in it if already running
+
+#if need to kill old jupyter notebook process because still keeping those ports open
+#or could go into log files per above and find token I think
+ps aux | grep jupyter
+kill 21436
+
+
+
