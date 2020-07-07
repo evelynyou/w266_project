@@ -1,3 +1,11 @@
+### Data to download
+wget http://web.eecs.umich.edu/~mihalcea/downloads/MELD.Raw.tar.gz
+
+wget https://dl.fbaipublicfiles.com/parlai/empatheticdialogues/empatheticdialogues.tar.gz
+
+tar -xf [name of tar.gz file]
+
+
 # w266_project
 https://github.com/facebookresearch/EmpatheticDialogues/blob/master/README.md
 
