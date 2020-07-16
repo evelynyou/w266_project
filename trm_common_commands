@@ -3,6 +3,23 @@ Common commands for w266
 #gcp
 tmetz@berkeley.edu
 
+### trm-gpu
+gcloud compute ssh --zone "us-central1-a" "trm-gpu" --project "w266-276313" --ssh-flag="-L 8896:127.0.0.1:8896"
+gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" tmetz@trm-gpu
+gcloud compute ssh tmetz@trm-gpu
+ssh -i /Users/tmetz/.ssh/google_compute_engine tmetz@35.238.183.63
+
+ip address: 35.238.183.63
+
+for vs code:
+ssh -i /Users/travismetz/.ssh/google_compute_engine tmetz@35.188.67.20
+
+things installed:
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+then used conda to install pandas, tensorflow, jupyter 
+!pip install -q tf-nightly
+!pip install -q tf-models-nightly
+
 
 ### project vm
 gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" --ssh-flag="-L 6006:127.0.0.1:6006" travismetz@project
@@ -28,4 +45,6 @@ ps aux | grep jupyter
 kill []
 
 
+pytorch
+pip intall parlai
 
