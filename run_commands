@@ -1,5 +1,5 @@
 python retrieval_train.py \
---batch-size 256 \
+--batch-size 32 \
 --bert-dim 300 \
 --cuda \
 --dataset-name empchat \
@@ -13,7 +13,7 @@ python retrieval_train.py \
 --model bert \
 --model-dir ${TRAIN_SAVE_FOLDER} \
 --model-name model \
---num-epochs 1 \
+--num-epochs 2 \
 --optimizer adamax \
 --stop-crit-num-epochs 10
 
@@ -22,3 +22,6 @@ python retrieval_train.py \
 EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 TRAIN_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
 PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl'
+
+watch nvidia-smi
+lspci | grep -i nvidia

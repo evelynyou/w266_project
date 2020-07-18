@@ -1,0 +1,2105 @@
+07/16/2020 09:01:13 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:01:13 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:01:13 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:01:58 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:01:58 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:01:58 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:01:58 PM: [ Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex . ]
+07/16/2020 09:01:58 PM: [ https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt not found in cache, downloading to /tmp/tmpm_2yowwc ]
+07/16/2020 09:01:58 PM: [ copying /tmp/tmpm_2yowwc to cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:01:58 PM: [ creating metadata file for /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:01:58 PM: [ removing temp file /tmp/tmpm_2yowwc ]
+07/16/2020 09:01:58 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:01:59 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:01:59 PM: [ Loading model /home/tmetz/w266_project/model_pretrained ]
+07/16/2020 09:11:01 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:11:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:11:01 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:11:01 PM: [ Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex . ]
+07/16/2020 09:11:02 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:11:02 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:11:02 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 09:11:03 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 09:11:03 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 09:11:03 PM: [ Setting fasttext_path to None ]
+07/16/2020 09:11:03 PM: [ Setting reddit_folder to None ]
+07/16/2020 09:11:47 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:11:47 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:11:47 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:11:48 PM: [ Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex . ]
+07/16/2020 09:11:48 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:11:48 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:11:48 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 09:11:49 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 09:11:49 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 09:11:49 PM: [ Setting fasttext_path to None ]
+07/16/2020 09:11:49 PM: [ Setting reddit_folder to None ]
+07/16/2020 09:11:55 PM: [ https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz not found in cache, downloading to /tmp/tmpyl9oglzp ]
+07/16/2020 09:12:23 PM: [ copying /tmp/tmpyl9oglzp to cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:12:23 PM: [ creating metadata file for /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:12:23 PM: [ removing temp file /tmp/tmpyl9oglzp ]
+07/16/2020 09:12:23 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:12:23 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp0wjoqag7 ]
+07/16/2020 09:12:27 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:12:29 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:12:29 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpwo8n4pbm ]
+07/16/2020 09:12:32 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:12:34 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:12:34 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp2n4umgu6 ]
+07/16/2020 09:12:38 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:17:46 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:17:46 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:17:46 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:17:47 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:17:47 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:17:47 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 09:17:48 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 09:17:48 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 09:17:48 PM: [ Setting fasttext_path to None ]
+07/16/2020 09:17:48 PM: [ Setting reddit_folder to None ]
+07/16/2020 09:17:49 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:17:49 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpthbzl3ga ]
+07/16/2020 09:17:52 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:17:54 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:17:54 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpld6ewwa3 ]
+07/16/2020 09:17:58 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:18:00 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:18:00 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpofjog51g ]
+07/16/2020 09:18:03 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:43:34 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:43:34 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:43:34 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:43:34 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:43:34 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:43:34 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 09:43:36 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 09:43:36 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 09:43:36 PM: [ Setting fasttext_path to None ]
+07/16/2020 09:43:36 PM: [ Setting reddit_folder to None ]
+07/16/2020 09:43:36 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:43:36 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp6f5wxhhb ]
+07/16/2020 09:43:40 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:43:42 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:43:42 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpl75cvbs_ ]
+07/16/2020 09:43:46 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:43:48 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:43:48 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpsi6h3fh5 ]
+07/16/2020 09:43:52 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:54:05 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 09:54:05 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 09:54:05 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 09:54:05 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 09:54:05 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 09:54:05 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 09:54:06 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 09:54:06 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 09:54:06 PM: [ Setting fasttext_path to None ]
+07/16/2020 09:54:06 PM: [ Setting reddit_folder to None ]
+07/16/2020 09:54:07 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:54:07 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpxw65skj8 ]
+07/16/2020 09:54:10 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:54:12 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:54:12 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpt15na2f_ ]
+07/16/2020 09:54:16 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 09:54:18 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 09:54:18 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp391et84x ]
+07/16/2020 09:54:21 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 10:16:55 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 10:16:55 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 10:16:55 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": false,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 10:16:55 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 10:16:55 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 10:16:55 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 10:16:56 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 10:16:56 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 10:16:56 PM: [ Setting fasttext_path to None ]
+07/16/2020 10:16:56 PM: [ Setting reddit_folder to None ]
+07/16/2020 10:16:57 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 10:16:57 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpti6aox76 ]
+07/16/2020 10:17:00 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 10:17:02 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 10:17:02 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmps7zjjw4p ]
+07/16/2020 10:17:06 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 10:17:07 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 10:17:07 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmps0hnuud5 ]
+07/16/2020 10:17:11 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:18:11 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 11:18:11 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 11:18:11 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 11:18:14 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 11:18:14 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 11:18:14 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 11:18:42 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 11:18:42 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 11:18:42 PM: [ Setting fasttext_path to None ]
+07/16/2020 11:18:42 PM: [ Setting reddit_folder to None ]
+07/16/2020 11:18:54 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:18:54 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpvkrv72cm ]
+07/16/2020 11:18:59 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:19:01 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:19:01 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp9wzoekey ]
+07/16/2020 11:19:05 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:19:07 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:19:07 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp9ry2eq8d ]
+07/16/2020 11:19:10 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:21:35 PM: [ Processing candidate top-K ]
+07/16/2020 11:21:36 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.585 | batch P@1 = 44.63 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 117.19 (s) ]
+07/16/2020 11:24:26 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 11:24:26 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 11:24:26 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 11:24:26 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 11:24:26 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 11:24:27 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 11:24:28 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 11:24:28 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 11:24:28 PM: [ Setting fasttext_path to None ]
+07/16/2020 11:24:28 PM: [ Setting reddit_folder to None ]
+07/16/2020 11:24:28 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:24:28 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpo4mwn5pk ]
+07/16/2020 11:24:32 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:24:34 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:24:34 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpz3swbn95 ]
+07/16/2020 11:24:37 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:24:39 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:24:39 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpgfe2sz75 ]
+07/16/2020 11:24:42 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:26:49 PM: [ Processing candidate top-K ]
+07/16/2020 11:26:51 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.585 | batch P@1 = 44.63 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 113.40 (s) ]
+07/16/2020 11:31:11 PM: [ COMMAND: retrieval_train.py --batch-size 128 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 11:31:11 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 11:31:11 PM: [ CONFIG:
+{
+    "batch_size": 128,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 11:31:11 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 11:31:11 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 11:31:11 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 11:31:13 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 11:31:13 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 11:31:13 PM: [ Setting fasttext_path to None ]
+07/16/2020 11:31:13 PM: [ Setting reddit_folder to None ]
+07/16/2020 11:31:13 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:31:13 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpz04y7zb1 ]
+07/16/2020 11:31:17 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:31:19 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:31:19 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpb_cjq890 ]
+07/16/2020 11:31:22 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:31:24 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:31:24 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp5mc3wi5g ]
+07/16/2020 11:31:27 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:33:25 PM: [ Processing candidate top-K ]
+07/16/2020 11:33:26 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.034 | batch P@1 = 52.42 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 103.57 (s) ]
+07/16/2020 11:36:36 PM: [ COMMAND: retrieval_train.py --batch-size 64 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 11:36:36 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 11:36:36 PM: [ CONFIG:
+{
+    "batch_size": 64,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 11:36:36 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 11:36:36 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 11:36:36 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 11:36:37 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 11:36:37 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 11:36:37 PM: [ Setting fasttext_path to None ]
+07/16/2020 11:36:37 PM: [ Setting reddit_folder to None ]
+07/16/2020 11:36:38 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:36:38 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpqncxwah1 ]
+07/16/2020 11:36:41 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:36:43 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:36:43 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmptz7jai4o ]
+07/16/2020 11:36:46 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:36:48 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:36:48 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmplklmivnm ]
+07/16/2020 11:36:52 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:38:44 PM: [ Processing candidate top-K ]
+07/16/2020 11:38:44 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.528 | batch P@1 = 60.84 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 97.45 (s) ]
+07/16/2020 11:41:17 PM: [ COMMAND: retrieval_train.py --batch-size 32 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/16/2020 11:41:17 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/16/2020 11:41:17 PM: [ CONFIG:
+{
+    "batch_size": 32,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/16/2020 11:41:18 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/16/2020 11:41:18 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/16/2020 11:41:18 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/16/2020 11:41:19 PM: [ Setting dailydialog_folder to None ]
+07/16/2020 11:41:19 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/16/2020 11:41:19 PM: [ Setting fasttext_path to None ]
+07/16/2020 11:41:19 PM: [ Setting reddit_folder to None ]
+07/16/2020 11:41:19 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:41:19 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpjccq2am4 ]
+07/16/2020 11:41:23 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:41:25 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:41:25 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp44vbdgl0 ]
+07/16/2020 11:41:28 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:41:30 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/16/2020 11:41:30 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmphk6gy5g4 ]
+07/16/2020 11:41:33 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/16/2020 11:43:20 PM: [ Processing candidate top-K ]
+07/16/2020 11:43:20 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.098 | batch P@1 = 69.40 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 92.26 (s) ]
+07/17/2020 12:42:27 AM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/17/2020 12:42:27 AM: [ ---------------------------------------------------------------------------------------------------- ]
+07/17/2020 12:42:27 AM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/17/2020 12:42:30 AM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/17/2020 12:42:30 AM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/17/2020 12:42:30 AM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/17/2020 12:42:58 AM: [ Setting dailydialog_folder to None ]
+07/17/2020 12:42:58 AM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/17/2020 12:42:58 AM: [ Setting fasttext_path to None ]
+07/17/2020 12:42:58 AM: [ Setting reddit_folder to None ]
+07/17/2020 12:43:12 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 12:43:12 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpm1prkjl5 ]
+07/17/2020 12:43:17 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 12:43:20 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 12:43:20 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp9a_xqny_ ]
+07/17/2020 12:43:23 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 12:43:25 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 12:43:25 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpd_hw3788 ]
+07/17/2020 12:43:29 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 12:45:34 AM: [ Processing candidate top-K ]
+07/17/2020 12:45:35 AM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.585 | batch P@1 = 44.63 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 97.06 (s) ]
+07/17/2020 01:11:25 AM: [ COMMAND: retrieval_train.py --batch-size 128 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/17/2020 01:11:25 AM: [ ---------------------------------------------------------------------------------------------------- ]
+07/17/2020 01:11:25 AM: [ CONFIG:
+{
+    "batch_size": 128,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/17/2020 01:11:28 AM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/17/2020 01:11:28 AM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/17/2020 01:11:28 AM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/17/2020 01:11:55 AM: [ Setting dailydialog_folder to None ]
+07/17/2020 01:11:55 AM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/17/2020 01:11:55 AM: [ Setting fasttext_path to None ]
+07/17/2020 01:11:55 AM: [ Setting reddit_folder to None ]
+07/17/2020 01:12:08 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:12:08 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp0bkpec6j ]
+07/17/2020 01:12:13 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:12:16 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:12:16 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpcpf90n_c ]
+07/17/2020 01:12:20 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:12:22 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:12:22 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpr8sl76zu ]
+07/17/2020 01:12:26 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:14:33 AM: [ Processing candidate top-K ]
+07/17/2020 01:14:34 AM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.034 | batch P@1 = 52.42 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 99.02 (s) ]
+07/17/2020 01:15:51 AM: [ COMMAND: retrieval_train.py --batch-size 64 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/17/2020 01:15:51 AM: [ ---------------------------------------------------------------------------------------------------- ]
+07/17/2020 01:15:51 AM: [ CONFIG:
+{
+    "batch_size": 64,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/17/2020 01:15:52 AM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/17/2020 01:15:52 AM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/17/2020 01:15:52 AM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/17/2020 01:15:53 AM: [ Setting dailydialog_folder to None ]
+07/17/2020 01:15:53 AM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/17/2020 01:15:53 AM: [ Setting fasttext_path to None ]
+07/17/2020 01:15:53 AM: [ Setting reddit_folder to None ]
+07/17/2020 01:15:54 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:15:54 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpcjyiabmu ]
+07/17/2020 01:15:58 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:16:00 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:16:00 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpeioxvr3m ]
+07/17/2020 01:16:04 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:16:06 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:16:06 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpdrtvz7yr ]
+07/17/2020 01:16:10 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:18:12 AM: [ Processing candidate top-K ]
+07/17/2020 01:18:13 AM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.528 | batch P@1 = 60.84 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 106.02 (s) ]
+07/17/2020 01:20:17 AM: [ COMMAND: retrieval_train.py --batch-size 32 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 1 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/17/2020 01:20:17 AM: [ ---------------------------------------------------------------------------------------------------- ]
+07/17/2020 01:20:17 AM: [ CONFIG:
+{
+    "batch_size": 32,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/17/2020 01:20:17 AM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/17/2020 01:20:17 AM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/17/2020 01:20:17 AM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/17/2020 01:20:19 AM: [ Setting dailydialog_folder to None ]
+07/17/2020 01:20:19 AM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/17/2020 01:20:19 AM: [ Setting fasttext_path to None ]
+07/17/2020 01:20:19 AM: [ Setting reddit_folder to None ]
+07/17/2020 01:20:19 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:20:19 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp86veigh9 ]
+07/17/2020 01:20:23 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:20:25 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:20:25 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp05qiy7iv ]
+07/17/2020 01:20:29 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:20:31 AM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/17/2020 01:20:31 AM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmph_iq44xc ]
+07/17/2020 01:20:34 AM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/17/2020 01:22:26 AM: [ Processing candidate top-K ]
+07/17/2020 01:22:26 AM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.098 | batch P@1 = 69.40 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 95.58 (s) ]
+07/17/2020 01:24:44 AM: [ train: Epoch = 0 | iter = 100/2020 | loss = 0.972 | batch P@1 = 71.16 % | elapsed time = 245.82 (s) ]
+07/17/2020 01:26:19 AM: [ train: Epoch = 0 | iter = 200/2020 | loss = 0.856 | batch P@1 = 72.30 % | elapsed time = 340.96 (s) ]
+07/17/2020 01:27:54 AM: [ train: Epoch = 0 | iter = 300/2020 | loss = 0.819 | batch P@1 = 73.08 % | elapsed time = 436.41 (s) ]
+07/17/2020 01:29:28 AM: [ train: Epoch = 0 | iter = 400/2020 | loss = 0.795 | batch P@1 = 73.68 % | elapsed time = 529.78 (s) ]
+07/17/2020 01:31:03 AM: [ train: Epoch = 0 | iter = 500/2020 | loss = 0.758 | batch P@1 = 74.34 % | elapsed time = 624.84 (s) ]
+07/17/2020 01:32:37 AM: [ train: Epoch = 0 | iter = 600/2020 | loss = 0.732 | batch P@1 = 75.02 % | elapsed time = 718.98 (s) ]
+07/17/2020 01:34:13 AM: [ train: Epoch = 0 | iter = 700/2020 | loss = 0.701 | batch P@1 = 75.48 % | elapsed time = 815.49 (s) ]
+07/17/2020 01:35:48 AM: [ train: Epoch = 0 | iter = 800/2020 | loss = 0.689 | batch P@1 = 75.95 % | elapsed time = 909.72 (s) ]
+07/17/2020 01:37:23 AM: [ train: Epoch = 0 | iter = 900/2020 | loss = 0.669 | batch P@1 = 76.33 % | elapsed time = 1005.34 (s) ]
+07/17/2020 01:38:58 AM: [ train: Epoch = 0 | iter = 1000/2020 | loss = 0.733 | batch P@1 = 76.45 % | elapsed time = 1099.95 (s) ]
+07/17/2020 01:40:32 AM: [ train: Epoch = 0 | iter = 1100/2020 | loss = 0.690 | batch P@1 = 76.67 % | elapsed time = 1193.94 (s) ]
+07/17/2020 01:42:06 AM: [ train: Epoch = 0 | iter = 1200/2020 | loss = 0.655 | batch P@1 = 76.91 % | elapsed time = 1288.41 (s) ]
+07/17/2020 01:43:41 AM: [ train: Epoch = 0 | iter = 1300/2020 | loss = 0.673 | batch P@1 = 77.11 % | elapsed time = 1382.98 (s) ]
+07/17/2020 01:45:15 AM: [ train: Epoch = 0 | iter = 1400/2020 | loss = 0.709 | batch P@1 = 77.19 % | elapsed time = 1477.03 (s) ]
+07/17/2020 01:46:52 AM: [ train: Epoch = 0 | iter = 1500/2020 | loss = 0.666 | batch P@1 = 77.40 % | elapsed time = 1574.17 (s) ]
+07/17/2020 01:48:28 AM: [ train: Epoch = 0 | iter = 1600/2020 | loss = 0.650 | batch P@1 = 77.54 % | elapsed time = 1670.06 (s) ]
+07/17/2020 01:50:02 AM: [ train: Epoch = 0 | iter = 1700/2020 | loss = 0.654 | batch P@1 = 77.66 % | elapsed time = 1763.77 (s) ]
+07/17/2020 01:51:35 AM: [ train: Epoch = 0 | iter = 1800/2020 | loss = 0.657 | batch P@1 = 77.78 % | elapsed time = 1856.76 (s) ]
+07/17/2020 01:53:08 AM: [ train: Epoch = 0 | iter = 1900/2020 | loss = 0.636 | batch P@1 = 77.92 % | elapsed time = 1950.02 (s) ]
+07/17/2020 01:54:43 AM: [ train: Epoch = 0 | iter = 2000/2020 | loss = 0.697 | batch P@1 = 77.92 % | elapsed time = 2045.08 (s) ]
+07/17/2020 01:55:02 AM: [ train: Epoch = 0 | iter = 2020/2020 | loss = 0.618 | batch P@1 = 77.94 % | elapsed time = 2063.85 (s) ]
+07/17/2020 01:55:02 AM: [ train: Epoch 0 done. Time for epoch = 1913.54 (s) ]
+07/17/2020 01:56:38 AM: [ Processing candidate top-K ]
+07/17/2020 01:56:38 AM: [ Valid (shuffled): Epoch = 0 | avg loss = 0.563 | batch P@1 = 82.34 % | P@1,100 = 70.55% | P@3,100 = 86.87% | P@10,100 = 96.48% | valid time = 96.22 (s) ]
+07/17/2020 01:58:08 AM: [ Processing candidate top-K ]
+07/17/2020 01:58:09 AM: [ Valid (not-shuffled): Epoch = 0 | avg loss = 2.427 | batch P@1 = 46.47 % | P@1,100 = 41.32% | P@3,100 = 77.10% | P@10,100 = 95.08% | valid time = 90.73 (s) ]
+07/17/2020 01:58:09 AM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model.mdl ]
+07/18/2020 04:32:13 PM: [ COMMAND: retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 2 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/18/2020 04:32:13 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/18/2020 04:32:13 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 2,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/18/2020 04:32:16 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/18/2020 04:32:16 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/18/2020 04:32:16 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/18/2020 04:32:41 PM: [ Setting dailydialog_folder to None ]
+07/18/2020 04:32:41 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/18/2020 04:32:41 PM: [ Setting fasttext_path to None ]
+07/18/2020 04:32:41 PM: [ Setting reddit_folder to None ]
+07/18/2020 04:32:54 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:32:54 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpg7n255mp ]
+07/18/2020 04:32:59 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:33:01 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:33:01 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmppc0bxf18 ]
+07/18/2020 04:33:05 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:33:07 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:33:07 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpa43up5u9 ]
+07/18/2020 04:33:11 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:35:17 PM: [ Processing candidate top-K ]
+07/18/2020 04:35:18 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.585 | batch P@1 = 44.63 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 97.87 (s) ]
+07/18/2020 04:37:06 PM: [ COMMAND: retrieval_train.py --batch-size 128 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 2 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/18/2020 04:37:06 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/18/2020 04:37:06 PM: [ CONFIG:
+{
+    "batch_size": 128,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 2,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/18/2020 04:37:06 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/18/2020 04:37:06 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/18/2020 04:37:06 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/18/2020 04:37:08 PM: [ Setting dailydialog_folder to None ]
+07/18/2020 04:37:08 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/18/2020 04:37:08 PM: [ Setting fasttext_path to None ]
+07/18/2020 04:37:08 PM: [ Setting reddit_folder to None ]
+07/18/2020 04:37:08 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:37:08 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmppjh0cyw5 ]
+07/18/2020 04:37:12 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:37:14 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:37:14 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp023qch0a ]
+07/18/2020 04:37:18 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:37:20 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:37:20 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp07dcbi3c ]
+07/18/2020 04:37:23 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:39:11 PM: [ Processing candidate top-K ]
+07/18/2020 04:39:12 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.034 | batch P@1 = 52.42 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 92.36 (s) ]
+07/18/2020 04:41:45 PM: [ COMMAND: retrieval_train.py --batch-size 64 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 2 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/18/2020 04:41:45 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/18/2020 04:41:45 PM: [ CONFIG:
+{
+    "batch_size": 64,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 2,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/18/2020 04:41:45 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/18/2020 04:41:45 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/18/2020 04:41:46 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/18/2020 04:41:47 PM: [ Setting dailydialog_folder to None ]
+07/18/2020 04:41:47 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/18/2020 04:41:47 PM: [ Setting fasttext_path to None ]
+07/18/2020 04:41:47 PM: [ Setting reddit_folder to None ]
+07/18/2020 04:41:47 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:41:47 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpgywo4e7v ]
+07/18/2020 04:41:51 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:41:53 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:41:53 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp9zq0pfoy ]
+07/18/2020 04:41:57 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:41:59 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:41:59 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp5k810bv0 ]
+07/18/2020 04:42:02 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:43:52 PM: [ Processing candidate top-K ]
+07/18/2020 04:43:52 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.528 | batch P@1 = 60.84 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 93.76 (s) ]
+07/18/2020 04:44:59 PM: [ COMMAND: retrieval_train.py --batch-size 32 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model --num-epochs 2 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/18/2020 04:44:59 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/18/2020 04:44:59 PM: [ CONFIG:
+{
+    "batch_size": 32,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model.mdl",
+    "model_name": "model",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 2,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/18/2020 04:45:00 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/18/2020 04:45:00 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/18/2020 04:45:00 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/18/2020 04:45:01 PM: [ Setting dailydialog_folder to None ]
+07/18/2020 04:45:01 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/empatheticdialogues ]
+07/18/2020 04:45:01 PM: [ Setting fasttext_path to None ]
+07/18/2020 04:45:01 PM: [ Setting reddit_folder to None ]
+07/18/2020 04:45:02 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:45:02 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpsowaykfo ]
+07/18/2020 04:45:05 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:45:07 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:45:07 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp_w19hvu_ ]
+07/18/2020 04:45:11 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:45:13 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/18/2020 04:45:13 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmp4xt1426k ]
+07/18/2020 04:45:16 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/18/2020 04:46:59 PM: [ Processing candidate top-K ]
+07/18/2020 04:46:59 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.098 | batch P@1 = 69.40 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 87.38 (s) ]
+07/18/2020 04:49:09 PM: [ train: Epoch = 0 | iter = 100/2020 | loss = 0.972 | batch P@1 = 71.16 % | elapsed time = 229.60 (s) ]
+07/18/2020 04:50:40 PM: [ train: Epoch = 0 | iter = 200/2020 | loss = 0.856 | batch P@1 = 72.30 % | elapsed time = 319.91 (s) ]
+07/18/2020 04:52:10 PM: [ train: Epoch = 0 | iter = 300/2020 | loss = 0.819 | batch P@1 = 73.08 % | elapsed time = 410.64 (s) ]
+07/18/2020 04:53:39 PM: [ train: Epoch = 0 | iter = 400/2020 | loss = 0.795 | batch P@1 = 73.68 % | elapsed time = 499.58 (s) ]
+07/18/2020 04:55:09 PM: [ train: Epoch = 0 | iter = 500/2020 | loss = 0.758 | batch P@1 = 74.34 % | elapsed time = 589.82 (s) ]
+07/18/2020 04:56:39 PM: [ train: Epoch = 0 | iter = 600/2020 | loss = 0.732 | batch P@1 = 75.02 % | elapsed time = 679.56 (s) ]
+07/18/2020 04:58:11 PM: [ train: Epoch = 0 | iter = 700/2020 | loss = 0.701 | batch P@1 = 75.48 % | elapsed time = 771.28 (s) ]
+07/18/2020 04:59:41 PM: [ train: Epoch = 0 | iter = 800/2020 | loss = 0.689 | batch P@1 = 75.95 % | elapsed time = 861.12 (s) ]
+07/18/2020 05:01:12 PM: [ train: Epoch = 0 | iter = 900/2020 | loss = 0.669 | batch P@1 = 76.33 % | elapsed time = 952.13 (s) ]
+07/18/2020 05:02:42 PM: [ train: Epoch = 0 | iter = 1000/2020 | loss = 0.733 | batch P@1 = 76.45 % | elapsed time = 1042.09 (s) ]
+07/18/2020 05:04:11 PM: [ train: Epoch = 0 | iter = 1100/2020 | loss = 0.690 | batch P@1 = 76.67 % | elapsed time = 1131.58 (s) ]
+07/18/2020 05:05:41 PM: [ train: Epoch = 0 | iter = 1200/2020 | loss = 0.655 | batch P@1 = 76.91 % | elapsed time = 1221.52 (s) ]
+07/18/2020 05:07:11 PM: [ train: Epoch = 0 | iter = 1300/2020 | loss = 0.673 | batch P@1 = 77.11 % | elapsed time = 1311.30 (s) ]
+07/18/2020 05:08:40 PM: [ train: Epoch = 0 | iter = 1400/2020 | loss = 0.709 | batch P@1 = 77.19 % | elapsed time = 1400.67 (s) ]
+07/18/2020 05:10:13 PM: [ train: Epoch = 0 | iter = 1500/2020 | loss = 0.666 | batch P@1 = 77.40 % | elapsed time = 1492.90 (s) ]
+07/18/2020 05:11:44 PM: [ train: Epoch = 0 | iter = 1600/2020 | loss = 0.650 | batch P@1 = 77.54 % | elapsed time = 1584.15 (s) ]
+07/18/2020 05:13:13 PM: [ train: Epoch = 0 | iter = 1700/2020 | loss = 0.654 | batch P@1 = 77.66 % | elapsed time = 1673.63 (s) ]
+07/18/2020 05:14:42 PM: [ train: Epoch = 0 | iter = 1800/2020 | loss = 0.657 | batch P@1 = 77.78 % | elapsed time = 1762.04 (s) ]
+07/18/2020 05:16:10 PM: [ train: Epoch = 0 | iter = 1900/2020 | loss = 0.636 | batch P@1 = 77.92 % | elapsed time = 1850.74 (s) ]
+07/18/2020 05:17:41 PM: [ train: Epoch = 0 | iter = 2000/2020 | loss = 0.697 | batch P@1 = 77.92 % | elapsed time = 1941.13 (s) ]
+07/18/2020 05:17:59 PM: [ train: Epoch = 0 | iter = 2020/2020 | loss = 0.618 | batch P@1 = 77.94 % | elapsed time = 1959.06 (s) ]
+07/18/2020 05:17:59 PM: [ train: Epoch 0 done. Time for epoch = 1820.22 (s) ]
+07/18/2020 05:19:26 PM: [ Processing candidate top-K ]
+07/18/2020 05:19:26 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 0.563 | batch P@1 = 82.34 % | P@1,100 = 70.55% | P@3,100 = 86.87% | P@10,100 = 96.48% | valid time = 87.16 (s) ]
+07/18/2020 05:20:48 PM: [ Processing candidate top-K ]
+07/18/2020 05:20:48 PM: [ Valid (not-shuffled): Epoch = 0 | avg loss = 2.427 | batch P@1 = 46.47 % | P@1,100 = 41.32% | P@3,100 = 77.10% | P@10,100 = 95.08% | valid time = 82.09 (s) ]
+07/18/2020 05:20:48 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model.mdl ]
+07/18/2020 05:22:39 PM: [ train: Epoch = 1 | iter = 100/2020 | loss = 0.562 | batch P@1 = 82.41 % | elapsed time = 2239.04 (s) ]
+07/18/2020 05:24:09 PM: [ train: Epoch = 1 | iter = 200/2020 | loss = 0.562 | batch P@1 = 82.45 % | elapsed time = 2329.06 (s) ]
+07/18/2020 05:25:39 PM: [ train: Epoch = 1 | iter = 300/2020 | loss = 0.586 | batch P@1 = 82.01 % | elapsed time = 2419.29 (s) ]
+07/18/2020 05:27:08 PM: [ train: Epoch = 1 | iter = 400/2020 | loss = 0.520 | batch P@1 = 82.43 % | elapsed time = 2508.29 (s) ]
+07/18/2020 05:28:37 PM: [ train: Epoch = 1 | iter = 500/2020 | loss = 0.586 | batch P@1 = 82.22 % | elapsed time = 2596.90 (s) ]
+07/18/2020 05:30:06 PM: [ train: Epoch = 1 | iter = 600/2020 | loss = 0.579 | batch P@1 = 82.17 % | elapsed time = 2685.85 (s) ]
+07/18/2020 05:31:36 PM: [ train: Epoch = 1 | iter = 700/2020 | loss = 0.542 | batch P@1 = 82.26 % | elapsed time = 2776.55 (s) ]
+07/18/2020 05:33:08 PM: [ train: Epoch = 1 | iter = 800/2020 | loss = 0.576 | batch P@1 = 82.15 % | elapsed time = 2867.94 (s) ]
+07/18/2020 05:34:38 PM: [ train: Epoch = 1 | iter = 900/2020 | loss = 0.581 | batch P@1 = 82.00 % | elapsed time = 2958.11 (s) ]
+07/18/2020 05:36:07 PM: [ train: Epoch = 1 | iter = 1000/2020 | loss = 0.536 | batch P@1 = 82.07 % | elapsed time = 3046.97 (s) ]
+07/18/2020 05:37:38 PM: [ train: Epoch = 1 | iter = 1100/2020 | loss = 0.596 | batch P@1 = 81.88 % | elapsed time = 3137.98 (s) ]
+07/18/2020 05:39:07 PM: [ train: Epoch = 1 | iter = 1200/2020 | loss = 0.528 | batch P@1 = 81.97 % | elapsed time = 3227.48 (s) ]
+07/18/2020 05:40:37 PM: [ train: Epoch = 1 | iter = 1300/2020 | loss = 0.553 | batch P@1 = 82.08 % | elapsed time = 3317.31 (s) ]
+07/18/2020 05:42:05 PM: [ train: Epoch = 1 | iter = 1400/2020 | loss = 0.543 | batch P@1 = 82.13 % | elapsed time = 3405.64 (s) ]
+07/18/2020 05:43:35 PM: [ train: Epoch = 1 | iter = 1500/2020 | loss = 0.559 | batch P@1 = 82.16 % | elapsed time = 3495.79 (s) ]
+07/18/2020 05:45:05 PM: [ train: Epoch = 1 | iter = 1600/2020 | loss = 0.512 | batch P@1 = 82.24 % | elapsed time = 3585.53 (s) ]
+07/18/2020 05:46:36 PM: [ train: Epoch = 1 | iter = 1700/2020 | loss = 0.548 | batch P@1 = 82.26 % | elapsed time = 3676.52 (s) ]
+07/18/2020 05:48:07 PM: [ train: Epoch = 1 | iter = 1800/2020 | loss = 0.544 | batch P@1 = 82.32 % | elapsed time = 3767.46 (s) ]
+07/18/2020 05:49:37 PM: [ train: Epoch = 1 | iter = 1900/2020 | loss = 0.537 | batch P@1 = 82.33 % | elapsed time = 3857.04 (s) ]
+07/18/2020 05:51:06 PM: [ train: Epoch = 1 | iter = 2000/2020 | loss = 0.551 | batch P@1 = 82.35 % | elapsed time = 3946.58 (s) ]
+07/18/2020 05:51:24 PM: [ train: Epoch = 1 | iter = 2020/2020 | loss = 0.581 | batch P@1 = 82.33 % | elapsed time = 3964.73 (s) ]
+07/18/2020 05:51:24 PM: [ train: Epoch 1 done. Time for epoch = 1815.81 (s) ]
+07/18/2020 05:52:51 PM: [ Processing candidate top-K ]
+07/18/2020 05:52:52 PM: [ Valid (shuffled): Epoch = 1 | avg loss = 0.507 | batch P@1 = 84.13 % | P@1,100 = 72.01% | P@3,100 = 88.60% | P@10,100 = 97.12% | valid time = 87.19 (s) ]
+07/18/2020 05:54:13 PM: [ Processing candidate top-K ]
+07/18/2020 05:54:14 PM: [ Valid (not-shuffled): Epoch = 1 | avg loss = 2.355 | batch P@1 = 48.98 % | P@1,100 = 43.71% | P@3,100 = 78.88% | P@10,100 = 95.70% | valid time = 81.91 (s) ]
+07/18/2020 05:54:14 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model.mdl ]
