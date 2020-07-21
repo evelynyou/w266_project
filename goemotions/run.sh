@@ -35,4 +35,5 @@ source ./bin/activate
 pip install numpy
 pip install six
 pip install "tensorflow>=1.11.0,<2.00.0"
-pip install -r goemotions/requirements.txt
+#pip install -r goemotions/requirements.txt (EY note: path doesn't work)
+pip install -r requirements.txt
