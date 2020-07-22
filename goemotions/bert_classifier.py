@@ -39,6 +39,8 @@ Main changes:
 - Included correlation-based regularization (based on training data)
 """
 
+
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -61,11 +63,10 @@ import pandas as pd
 import tensorflow as tf
 
 flags = tf.flags
-
 FLAGS = flags.FLAGS
 
 ## Required parameters
-flags.DEFINE_string("emotion_file", "data/emotions.txt",
+flags.DEFINE_string("emotion_file", "/home/tmetz/w266_project/goemotions/data/emotions.txt",
                     "File containing a list of emotions.")
 
 flags.DEFINE_string(
@@ -74,15 +75,15 @@ flags.DEFINE_string(
     "for the task.")
 
 flags.DEFINE_string(
-    "bert_config_file", None,
+    "bert_config_file", "/home/tmetz/w266_project/goemotions/cased_L-12_H-768_A-12/bert_config.json",
     "The config json file corresponding to the pre-trained BERT model. "
     "This specifies the model architecture.")
 
-flags.DEFINE_string("vocab_file", None,
+flags.DEFINE_string("vocab_file", "/home/tmetz/w266_project/goemotions/cased_L-12_H-768_A-12/vocab.txt",
                     "The vocabulary file that the BERT model was trained on.")
 
 flags.DEFINE_string(
-    "output_dir", None,
+    "output_dir", "/home/tmetz/w266_project/goemotions/model",
     "The output directory where the model checkpoints will be written.")
 
 flags.DEFINE_string("test_fname", "test.tsv", "The name of the test file.")
@@ -170,10 +171,10 @@ flags.DEFINE_integer("iterations_per_loop", 1000,
 flags.DEFINE_integer("eval_steps", None,
                      "How many steps to take to go over the eval set.")
 
-flags.DEFINE_string("sentiment_file", "sentiment_dict.json",
+flags.DEFINE_string("sentiment_file", "/home/tmetz/w266_project/goemotions/data/sentiment_dict.json",
                     "Dictionary of sentiment categories.")
 
-flags.DEFINE_string("entailment_file", "entailment_dict.json",
+flags.DEFINE_string("entailment_file", "/home/tmetz/w266_project/goemotions/data/entailment_dict.json",
                     "Dictionary of entailments.")
 
 flags.DEFINE_string(

@@ -17,8 +17,9 @@ ssh -i /Users/travismetz/.ssh/google_compute_engine tmetz@35.188.67.20
 things installed:
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 then used conda to install pandas, tensorflow, jupyter 
-!pip install -q tf-nightly
-!pip install -q tf-models-nightly
+pip install -q tf-nightly
+pip install -q tf-models-nightly
+pip install fairseq
 
 
 ### project vm

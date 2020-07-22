@@ -18,3 +18,6 @@ https://github.com/facebookresearch/EmpatheticDialogues/blob/master/README.md
 https://docs.google.com/document/d/1lXIWOtcTKdetSJFUu6KK_ByFaldmpu5SgGv3QXlg4-M/edit
 
 https://docs.google.com/document/d/1amngSbSvrMR50q7QK9Y2WVgcirq3_saWHIhdhL9G_RE/edit
+
+
+Yanran Li, Hui Su, Xiaoyu Shen, Wenjie Li, Ziqiang Cao, and Shuzi Niu. DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset. IJCNLP 2017. [pdf] [arXiv] [dataset]

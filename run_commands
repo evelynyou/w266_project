@@ -25,3 +25,13 @@ PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained
 
 watch nvidia-smi
 lspci | grep -i nvidia
+
+### emotion
+python3 -m bert_classifier \
+--do_train False \
+--do_predict True \
+--test_fname test.tsv \
+--calculate_metrics False \
+--init_checkpoint /home/tmetz/w266_project/goemotions/model/model.ckpt-10852
+
+--bert_config_file /home/tmetz/w266_project/goemotions/model/config.json
