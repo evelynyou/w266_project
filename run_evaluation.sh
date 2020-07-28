@@ -1,11 +1,18 @@
 #!/bin/sh
 EVAL_SAVE_FOLDER='/home/tmetz/w266_project/evaluation'
 PATH_TO_MODEL_WITH_TRANSFORMER_DICT='/home/tmetz/w266_project/model_transformer/normal_transformer_pretrained.mdl'
-EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 TRAIN_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
 PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl'
-MODEL_NAME='model_base_ed'
-#change model name for revised ed model
+
+#normal base model
+#MODEL_NAME='model_base_ed'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
+
+
+#change model name for revised selfeval
+MODEL_NAME='model_revised_ed_selfeval'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
+EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 
 
 #this runs evaluation on ED

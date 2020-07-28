@@ -3,12 +3,13 @@ Common commands for w266
 #gcp
 tmetz@berkeley.edu
 
-### trm-gpu
+### new gpu in us-east1-c
 gcloud beta compute ssh --zone "us-east1-c" "test-gpu-1" --project "w266-276313"
 gcloud compute ssh tmetz@test-gpu-1
 ssh -i /Users/travismetz/.ssh/google_compute_engine tmetz@34.75.110.101
+gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" tmetz@test-gpu-1
 
-
+### trm-gpu
 gcloud compute ssh --zone "us-central1-a" "trm-gpu" --project "w266-276313" --ssh-flag="-L 8896:127.0.0.1:8896"
 gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" tmetz@trm-gpu
 gcloud compute ssh tmetz@trm-gpu

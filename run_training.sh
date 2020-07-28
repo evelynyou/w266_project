@@ -8,11 +8,16 @@ TRAIN_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
 PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl'
 
 #revised dataset for selfeval==5
-EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
-MODEL_NAME='model_revised_ed_selfeval'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
+#MODEL_NAME='model_revised_ed_selfeval'
 
+#base dataset
 #EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 #MODEL_NAME='model_base_ed'
+
+#dataset cleaned for bad rows
+EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_cleaned'
+MODEL_NAME='model_revised_ed_cleaned'
 
 
 python /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
