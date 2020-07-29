@@ -7,10 +7,10 @@ PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained
 #MODEL_NAME='model_base_ed'
 #EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 
-MODEL_NAME='model_revised_ed_selfeval'
+#MODEL_NAME='model_revised_ed_selfeval'
 EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 EVAL_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
-
+MODEL_NAME='model_revised_ed_cleaned'
 
 # P@1,100
 python3 /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \

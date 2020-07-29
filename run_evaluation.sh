@@ -10,7 +10,11 @@ PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained
 
 
 #change model name for revised selfeval
-MODEL_NAME='model_revised_ed_selfeval'
+#MODEL_NAME='model_revised_ed_selfeval'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
+
+MODEL_NAME='model_revised_ed_cleaned'
 #EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
 EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 
