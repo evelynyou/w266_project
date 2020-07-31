@@ -5,17 +5,11 @@ TRAIN_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
 PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl'
 
 #normal base model
-#MODEL_NAME='model_base_ed'
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
-
-
-#change model name for revised selfeval
+MODEL_NAME='model_base_ed'
 #MODEL_NAME='model_revised_ed_selfeval'
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
-
-MODEL_NAME='model_revised_ed_cleaned'
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_selfeval'
+#MODEL_NAME='model_revised_ed_cleaned'
+#MODEL_NAME='model_revised_ed_emotion1'
+#MODEL_NAME='model_revised_ed_emotion2'
 EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 
 
