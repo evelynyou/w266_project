@@ -1,10 +1,12 @@
-### Metz/You W266 Project
-Details regarding use of GoEmotion Framework
+## Metz/You W266 Project
+Details regarding use of GoEmotion Framework.
+
+This is based on https://github.com/google-research/google-research/tree/master/goemotions and the associated paper: https://arxiv.org/abs/2005.00547 
 
 
-lspci | grep -i nvidia
-
-### emotion
+### Fine-tuning BERT using GoEmotions dataset
+```python -m goemotions.bert_classifier```
+   
 within goemotions folder
 stores test results in data\processed folder
 folder structure manually described in bert_classifier.py

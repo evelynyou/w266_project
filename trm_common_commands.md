@@ -9,6 +9,9 @@ gcloud compute ssh tmetz@test-gpu-1
 ssh -i /Users/travismetz/.ssh/google_compute_engine tmetz@34.75.110.101
 gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" tmetz@test-gpu-1
 
+
+watch nvidia-smi
+
 ### trm-gpu
 gcloud compute ssh --zone "us-central1-a" "trm-gpu" --project "w266-276313" --ssh-flag="-L 8896:127.0.0.1:8896"
 gcloud compute ssh --ssh-flag="-L 8896:127.0.0.1:8896" tmetz@trm-gpu
