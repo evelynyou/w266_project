@@ -20,20 +20,13 @@ We modified bert_classifier.py to reference proper folder structure.
 
 We converted the EmpatheticDialogues dataset into appropriate format (`w266-project/data/ed_for_goemotions.tsv`)
 
-Stores test results in `w266-project/data/processed` folder
+It stores test results in `w266-project/data/processed` folder as `ed_for_goemotions.tsv.label_predictions.tsv`
 
-
-run from ~/w266_project/goemotions
-ed_for_goemotions.tsv
-
+```
 python3 -m bert_classifier \
 --do_train False \
 --do_predict True \
 --test_fname /home/tmetz/w266_project/data/processed/ed_for_goemotions.tsv \
 --calculate_metrics False \
 --init_checkpoint /home/tmetz/w266_project/goemotions/model/model.ckpt-10852
-
-
-
---bert_config_file /home/tmetz/w266_project/goemotions/model/config.json
---test_fname test.tsv \
+```
