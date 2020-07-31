@@ -1,0 +1,308 @@
+07/29/2020 06:27:22 PM: [ COMMAND: /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py --batch-size 32 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/ed_revised_emotion1 --learning-rate 1e-5 --load-checkpoint /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl --max-hist-len 4 --model bert --model-dir /home/tmetz/w266_project/model_trained --model-name model_revised_ed_emotion1 --num-epochs 4 --optimizer adamax --stop-crit-num-epochs 10 ]
+07/29/2020 06:27:22 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/29/2020 06:27:22 PM: [ CONFIG:
+{
+    "batch_size": 32,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/ed_revised_emotion1",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": 1e-05,
+    "load_checkpoint": "/home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl",
+    "log_file": "/home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl",
+    "model_name": "model_revised_ed_emotion1",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 4,
+    "optimizer": "adamax",
+    "pretrained": null,
+    "random_seed": 92179,
+    "reactonly": false,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": 10,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/29/2020 06:27:22 PM: [ loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /home/tmetz/.pytorch_pretrained_bert/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1 ]
+07/29/2020 06:27:22 PM: [ --dict-max-words will be ignored because we are using the BERT tokenizer. ]
+07/29/2020 06:27:22 PM: [ Loading model /home/tmetz/w266_project/model_pretrained/bert_pretrained.mdl ]
+07/29/2020 06:27:24 PM: [ Setting dailydialog_folder to None ]
+07/29/2020 06:27:24 PM: [ Setting empchat_folder to /home/tmetz/w266_project/data/ed_revised_emotion1 ]
+07/29/2020 06:27:24 PM: [ Setting fasttext_path to None ]
+07/29/2020 06:27:24 PM: [ Setting reddit_folder to None ]
+07/29/2020 06:27:24 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 06:27:24 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpq1s1_vub ]
+07/29/2020 06:27:28 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 06:27:30 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 06:27:30 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpq_uwimyf ]
+07/29/2020 06:27:33 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 06:27:35 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 06:27:35 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpokc84ua4 ]
+07/29/2020 06:27:39 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 06:29:18 PM: [ Processing candidate top-K ]
+07/29/2020 06:29:18 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.098 | batch P@1 = 69.40 % | P@1,100 = 55.38% | P@3,100 = 73.74% | P@10,100 = 89.42% | valid time = 82.56 (s) ]
+07/29/2020 06:31:32 PM: [ train: Epoch = 0 | iter = 100/1770 | loss = 1.004 | batch P@1 = 70.03 % | elapsed time = 228.92 (s) ]
+07/29/2020 06:33:08 PM: [ train: Epoch = 0 | iter = 200/1770 | loss = 0.897 | batch P@1 = 71.41 % | elapsed time = 324.71 (s) ]
+07/29/2020 06:34:43 PM: [ train: Epoch = 0 | iter = 300/1770 | loss = 0.807 | batch P@1 = 72.47 % | elapsed time = 420.23 (s) ]
+07/29/2020 06:36:17 PM: [ train: Epoch = 0 | iter = 400/1770 | loss = 0.787 | batch P@1 = 73.40 % | elapsed time = 514.44 (s) ]
+07/29/2020 06:37:54 PM: [ train: Epoch = 0 | iter = 500/1770 | loss = 0.782 | batch P@1 = 73.84 % | elapsed time = 610.97 (s) ]
+07/29/2020 06:39:30 PM: [ train: Epoch = 0 | iter = 600/1770 | loss = 0.748 | batch P@1 = 74.25 % | elapsed time = 706.55 (s) ]
+07/29/2020 06:41:04 PM: [ train: Epoch = 0 | iter = 700/1770 | loss = 0.740 | batch P@1 = 74.73 % | elapsed time = 801.25 (s) ]
+07/29/2020 06:42:40 PM: [ train: Epoch = 0 | iter = 800/1770 | loss = 0.701 | batch P@1 = 75.24 % | elapsed time = 896.76 (s) ]
+07/29/2020 06:44:14 PM: [ train: Epoch = 0 | iter = 900/1770 | loss = 0.694 | batch P@1 = 75.65 % | elapsed time = 991.11 (s) ]
+07/29/2020 06:45:49 PM: [ train: Epoch = 0 | iter = 1000/1770 | loss = 0.673 | batch P@1 = 75.99 % | elapsed time = 1086.02 (s) ]
+07/29/2020 06:47:23 PM: [ train: Epoch = 0 | iter = 1100/1770 | loss = 0.662 | batch P@1 = 76.30 % | elapsed time = 1179.46 (s) ]
+07/29/2020 06:48:58 PM: [ train: Epoch = 0 | iter = 1200/1770 | loss = 0.707 | batch P@1 = 76.46 % | elapsed time = 1275.04 (s) ]
+07/29/2020 06:50:33 PM: [ train: Epoch = 0 | iter = 1300/1770 | loss = 0.639 | batch P@1 = 76.74 % | elapsed time = 1369.95 (s) ]
+07/29/2020 06:52:08 PM: [ train: Epoch = 0 | iter = 1400/1770 | loss = 0.629 | batch P@1 = 76.98 % | elapsed time = 1464.60 (s) ]
+07/29/2020 06:53:42 PM: [ train: Epoch = 0 | iter = 1500/1770 | loss = 0.620 | batch P@1 = 77.21 % | elapsed time = 1558.89 (s) ]
+07/29/2020 06:55:18 PM: [ train: Epoch = 0 | iter = 1600/1770 | loss = 0.642 | batch P@1 = 77.39 % | elapsed time = 1654.61 (s) ]
+07/29/2020 06:56:52 PM: [ train: Epoch = 0 | iter = 1700/1770 | loss = 0.642 | batch P@1 = 77.53 % | elapsed time = 1749.43 (s) ]
+07/29/2020 06:57:59 PM: [ train: Epoch = 0 | iter = 1770/1770 | loss = 0.636 | batch P@1 = 77.62 % | elapsed time = 1816.01 (s) ]
+07/29/2020 06:57:59 PM: [ train: Epoch 0 done. Time for epoch = 1685.22 (s) ]
+07/29/2020 06:59:32 PM: [ Processing candidate top-K ]
+07/29/2020 06:59:32 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 0.571 | batch P@1 = 82.86 % | P@1,100 = 70.15% | P@3,100 = 87.03% | P@10,100 = 96.53% | valid time = 92.75 (s) ]
+07/29/2020 07:00:59 PM: [ Processing candidate top-K ]
+07/29/2020 07:00:59 PM: [ Valid (not-shuffled): Epoch = 0 | avg loss = 2.516 | batch P@1 = 45.90 % | P@1,100 = 40.85% | P@3,100 = 76.72% | P@10,100 = 94.60% | valid time = 87.17 (s) ]
+07/29/2020 07:00:59 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl ]
+07/29/2020 07:02:34 PM: [ train: Epoch = 1 | iter = 100/1770 | loss = 0.576 | batch P@1 = 81.09 % | elapsed time = 2090.70 (s) ]
+07/29/2020 07:04:08 PM: [ train: Epoch = 1 | iter = 200/1770 | loss = 0.574 | batch P@1 = 81.55 % | elapsed time = 2185.43 (s) ]
+07/29/2020 07:05:45 PM: [ train: Epoch = 1 | iter = 300/1770 | loss = 0.604 | batch P@1 = 81.29 % | elapsed time = 2281.61 (s) ]
+07/29/2020 07:07:21 PM: [ train: Epoch = 1 | iter = 400/1770 | loss = 0.593 | batch P@1 = 81.18 % | elapsed time = 2377.46 (s) ]
+07/29/2020 07:08:55 PM: [ train: Epoch = 1 | iter = 500/1770 | loss = 0.577 | batch P@1 = 81.27 % | elapsed time = 2471.67 (s) ]
+07/29/2020 07:10:29 PM: [ train: Epoch = 1 | iter = 600/1770 | loss = 0.541 | batch P@1 = 81.56 % | elapsed time = 2565.67 (s) ]
+07/29/2020 07:12:04 PM: [ train: Epoch = 1 | iter = 700/1770 | loss = 0.556 | batch P@1 = 81.62 % | elapsed time = 2660.50 (s) ]
+07/29/2020 07:13:40 PM: [ train: Epoch = 1 | iter = 800/1770 | loss = 0.547 | batch P@1 = 81.75 % | elapsed time = 2756.62 (s) ]
+07/29/2020 07:15:15 PM: [ train: Epoch = 1 | iter = 900/1770 | loss = 0.550 | batch P@1 = 81.82 % | elapsed time = 2851.80 (s) ]
+07/29/2020 07:16:50 PM: [ train: Epoch = 1 | iter = 1000/1770 | loss = 0.519 | batch P@1 = 81.93 % | elapsed time = 2946.93 (s) ]
+07/29/2020 07:18:26 PM: [ train: Epoch = 1 | iter = 1100/1770 | loss = 0.549 | batch P@1 = 81.91 % | elapsed time = 3043.20 (s) ]
+07/29/2020 07:20:01 PM: [ train: Epoch = 1 | iter = 1200/1770 | loss = 0.542 | batch P@1 = 82.01 % | elapsed time = 3137.53 (s) ]
+07/29/2020 07:21:37 PM: [ train: Epoch = 1 | iter = 1300/1770 | loss = 0.591 | batch P@1 = 81.97 % | elapsed time = 3233.67 (s) ]
+07/29/2020 07:23:14 PM: [ train: Epoch = 1 | iter = 1400/1770 | loss = 0.532 | batch P@1 = 82.03 % | elapsed time = 3330.51 (s) ]
+07/29/2020 07:24:49 PM: [ train: Epoch = 1 | iter = 1500/1770 | loss = 0.575 | batch P@1 = 81.99 % | elapsed time = 3426.26 (s) ]
+07/29/2020 07:26:26 PM: [ train: Epoch = 1 | iter = 1600/1770 | loss = 0.560 | batch P@1 = 82.02 % | elapsed time = 3523.21 (s) ]
+07/29/2020 07:28:02 PM: [ train: Epoch = 1 | iter = 1700/1770 | loss = 0.578 | batch P@1 = 81.99 % | elapsed time = 3618.91 (s) ]
+07/29/2020 07:29:08 PM: [ train: Epoch = 1 | iter = 1770/1770 | loss = 0.571 | batch P@1 = 81.98 % | elapsed time = 3685.07 (s) ]
+07/29/2020 07:29:08 PM: [ train: Epoch 1 done. Time for epoch = 1686.87 (s) ]
+07/29/2020 07:30:40 PM: [ Processing candidate top-K ]
+07/29/2020 07:30:41 PM: [ Valid (shuffled): Epoch = 1 | avg loss = 0.537 | batch P@1 = 83.29 % | P@1,100 = 71.44% | P@3,100 = 87.70% | P@10,100 = 97.00% | valid time = 92.49 (s) ]
+07/29/2020 07:32:07 PM: [ Processing candidate top-K ]
+07/29/2020 07:32:07 PM: [ Valid (not-shuffled): Epoch = 1 | avg loss = 2.316 | batch P@1 = 49.28 % | P@1,100 = 43.97% | P@3,100 = 78.65% | P@10,100 = 95.38% | valid time = 86.74 (s) ]
+07/29/2020 07:32:07 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl ]
+07/29/2020 07:34:04 PM: [ train: Epoch = 2 | iter = 100/1770 | loss = 0.481 | batch P@1 = 84.75 % | elapsed time = 3980.58 (s) ]
+07/29/2020 07:35:38 PM: [ train: Epoch = 2 | iter = 200/1770 | loss = 0.478 | batch P@1 = 85.09 % | elapsed time = 4074.80 (s) ]
+07/29/2020 07:37:13 PM: [ train: Epoch = 2 | iter = 300/1770 | loss = 0.503 | batch P@1 = 84.75 % | elapsed time = 4170.08 (s) ]
+07/29/2020 07:38:47 PM: [ train: Epoch = 2 | iter = 400/1770 | loss = 0.501 | batch P@1 = 84.62 % | elapsed time = 4263.66 (s) ]
+07/29/2020 07:40:20 PM: [ train: Epoch = 2 | iter = 500/1770 | loss = 0.498 | batch P@1 = 84.46 % | elapsed time = 4357.36 (s) ]
+07/29/2020 07:41:56 PM: [ train: Epoch = 2 | iter = 600/1770 | loss = 0.491 | batch P@1 = 84.35 % | elapsed time = 4453.33 (s) ]
+07/29/2020 07:43:33 PM: [ train: Epoch = 2 | iter = 700/1770 | loss = 0.440 | batch P@1 = 84.47 % | elapsed time = 4550.09 (s) ]
+07/29/2020 07:45:09 PM: [ train: Epoch = 2 | iter = 800/1770 | loss = 0.487 | batch P@1 = 84.38 % | elapsed time = 4646.23 (s) ]
+07/29/2020 07:46:46 PM: [ train: Epoch = 2 | iter = 900/1770 | loss = 0.475 | batch P@1 = 84.40 % | elapsed time = 4743.38 (s) ]
+07/29/2020 07:48:21 PM: [ train: Epoch = 2 | iter = 1000/1770 | loss = 0.502 | batch P@1 = 84.38 % | elapsed time = 4837.95 (s) ]
+07/29/2020 07:49:56 PM: [ train: Epoch = 2 | iter = 1100/1770 | loss = 0.533 | batch P@1 = 84.27 % | elapsed time = 4933.19 (s) ]
+07/29/2020 07:51:33 PM: [ train: Epoch = 2 | iter = 1200/1770 | loss = 0.508 | batch P@1 = 84.25 % | elapsed time = 5030.13 (s) ]
+07/29/2020 07:53:10 PM: [ train: Epoch = 2 | iter = 1300/1770 | loss = 0.485 | batch P@1 = 84.26 % | elapsed time = 5126.72 (s) ]
+07/29/2020 07:54:44 PM: [ train: Epoch = 2 | iter = 1400/1770 | loss = 0.454 | batch P@1 = 84.31 % | elapsed time = 5221.39 (s) ]
+07/29/2020 07:56:20 PM: [ train: Epoch = 2 | iter = 1500/1770 | loss = 0.465 | batch P@1 = 84.34 % | elapsed time = 5317.20 (s) ]
+07/29/2020 07:57:55 PM: [ train: Epoch = 2 | iter = 1600/1770 | loss = 0.489 | batch P@1 = 84.32 % | elapsed time = 5412.22 (s) ]
+07/29/2020 07:59:31 PM: [ train: Epoch = 2 | iter = 1700/1770 | loss = 0.491 | batch P@1 = 84.29 % | elapsed time = 5507.92 (s) ]
+07/29/2020 08:00:39 PM: [ train: Epoch = 2 | iter = 1770/1770 | loss = 0.476 | batch P@1 = 84.30 % | elapsed time = 5576.12 (s) ]
+07/29/2020 08:00:39 PM: [ train: Epoch 2 done. Time for epoch = 1691.29 (s) ]
+07/29/2020 08:02:12 PM: [ Processing candidate top-K ]
+07/29/2020 08:02:12 PM: [ Valid (shuffled): Epoch = 2 | avg loss = 0.515 | batch P@1 = 84.36 % | P@1,100 = 72.54% | P@3,100 = 88.78% | P@10,100 = 97.09% | valid time = 92.75 (s) ]
+07/29/2020 08:03:39 PM: [ Processing candidate top-K ]
+07/29/2020 08:03:39 PM: [ Valid (not-shuffled): Epoch = 2 | avg loss = 2.402 | batch P@1 = 49.55 % | P@1,100 = 44.39% | P@3,100 = 79.26% | P@10,100 = 95.71% | valid time = 86.83 (s) ]
+07/29/2020 08:03:39 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl ]
+07/29/2020 08:05:34 PM: [ train: Epoch = 3 | iter = 100/1770 | loss = 0.451 | batch P@1 = 85.47 % | elapsed time = 5870.84 (s) ]
+07/29/2020 08:07:10 PM: [ train: Epoch = 3 | iter = 200/1770 | loss = 0.439 | batch P@1 = 85.84 % | elapsed time = 5967.21 (s) ]
+07/29/2020 08:08:45 PM: [ train: Epoch = 3 | iter = 300/1770 | loss = 0.437 | batch P@1 = 85.68 % | elapsed time = 6062.04 (s) ]
+07/29/2020 08:10:20 PM: [ train: Epoch = 3 | iter = 400/1770 | loss = 0.459 | batch P@1 = 85.59 % | elapsed time = 6157.22 (s) ]
+07/29/2020 08:11:59 PM: [ train: Epoch = 3 | iter = 500/1770 | loss = 0.422 | batch P@1 = 85.74 % | elapsed time = 6255.72 (s) ]
+07/29/2020 08:13:35 PM: [ train: Epoch = 3 | iter = 600/1770 | loss = 0.427 | batch P@1 = 85.88 % | elapsed time = 6352.40 (s) ]
+07/29/2020 08:15:11 PM: [ train: Epoch = 3 | iter = 700/1770 | loss = 0.450 | batch P@1 = 85.83 % | elapsed time = 6448.22 (s) ]
+07/29/2020 08:16:47 PM: [ train: Epoch = 3 | iter = 800/1770 | loss = 0.422 | batch P@1 = 85.93 % | elapsed time = 6543.82 (s) ]
+07/29/2020 08:18:22 PM: [ train: Epoch = 3 | iter = 900/1770 | loss = 0.430 | batch P@1 = 85.88 % | elapsed time = 6638.70 (s) ]
+07/29/2020 08:19:58 PM: [ train: Epoch = 3 | iter = 1000/1770 | loss = 0.441 | batch P@1 = 85.87 % | elapsed time = 6735.08 (s) ]
+07/29/2020 08:21:31 PM: [ train: Epoch = 3 | iter = 1100/1770 | loss = 0.456 | batch P@1 = 85.87 % | elapsed time = 6828.38 (s) ]
+07/29/2020 08:23:04 PM: [ train: Epoch = 3 | iter = 1200/1770 | loss = 0.404 | batch P@1 = 85.95 % | elapsed time = 6921.01 (s) ]
+07/29/2020 08:24:39 PM: [ train: Epoch = 3 | iter = 1300/1770 | loss = 0.409 | batch P@1 = 86.02 % | elapsed time = 7016.11 (s) ]
+07/29/2020 08:26:14 PM: [ train: Epoch = 3 | iter = 1400/1770 | loss = 0.423 | batch P@1 = 86.00 % | elapsed time = 7110.47 (s) ]
+07/29/2020 08:27:50 PM: [ train: Epoch = 3 | iter = 1500/1770 | loss = 0.460 | batch P@1 = 85.94 % | elapsed time = 7206.81 (s) ]
+07/29/2020 08:29:23 PM: [ train: Epoch = 3 | iter = 1600/1770 | loss = 0.402 | batch P@1 = 86.00 % | elapsed time = 7300.01 (s) ]
+07/29/2020 08:31:00 PM: [ train: Epoch = 3 | iter = 1700/1770 | loss = 0.419 | batch P@1 = 86.02 % | elapsed time = 7396.82 (s) ]
+07/29/2020 08:32:06 PM: [ train: Epoch = 3 | iter = 1770/1770 | loss = 0.407 | batch P@1 = 86.01 % | elapsed time = 7462.64 (s) ]
+07/29/2020 08:32:06 PM: [ train: Epoch 3 done. Time for epoch = 1686.48 (s) ]
+07/29/2020 08:33:38 PM: [ Processing candidate top-K ]
+07/29/2020 08:33:38 PM: [ Valid (shuffled): Epoch = 3 | avg loss = 0.490 | batch P@1 = 84.92 % | P@1,100 = 73.31% | P@3,100 = 89.16% | P@10,100 = 97.32% | valid time = 92.38 (s) ]
+07/29/2020 08:35:05 PM: [ Processing candidate top-K ]
+07/29/2020 08:35:05 PM: [ Valid (not-shuffled): Epoch = 3 | avg loss = 2.375 | batch P@1 = 51.06 % | P@1,100 = 45.70% | P@3,100 = 79.95% | P@10,100 = 95.95% | valid time = 87.09 (s) ]
+07/29/2020 08:35:05 PM: [ New best loss, saving model to /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl ]
+07/29/2020 08:46:01 PM: [ COMMAND: /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py --batch-size 256 --bert-dim 300 --cuda --dataset-name empchat --dict-max-words 250000 --display-iter 100 --embeddings None --empchat-folder /home/tmetz/w266_project/data/empatheticdialogues --max-hist-len 4 --model bert --model-name model_revised_ed_emotion1 --optimizer adamax --pretrained /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl --reactonly --model-dir /home/tmetz/w266_project/model_trained ]
+07/29/2020 08:46:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+07/29/2020 08:46:01 PM: [ CONFIG:
+{
+    "batch_size": 256,
+    "bert_add_transformer_layer": false,
+    "bert_dim": 300,
+    "cuda": true,
+    "dailydialog_folder": null,
+    "dataset_name": "empchat",
+    "dict_max_words": 250000,
+    "display_iter": 100,
+    "embeddings": "None",
+    "embeddings_size": 300,
+    "empchat_folder": "/home/tmetz/w266_project/data/empatheticdialogues",
+    "epoch_start": 0,
+    "fasttext": null,
+    "fasttext_path": null,
+    "fasttext_type": null,
+    "hits_at_nb_cands": 100,
+    "learn_embeddings": false,
+    "learning_rate": null,
+    "load_checkpoint": null,
+    "log_file": "/home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.txt",
+    "max_hist_len": 4,
+    "max_sent_len": 100,
+    "model": "bert",
+    "model_dir": "/home/tmetz/w266_project/model_trained",
+    "model_file": "/home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl",
+    "model_name": "model_revised_ed_emotion1",
+    "n_layers": 6,
+    "no_shuffle": false,
+    "normalize_emb": false,
+    "normalize_sent_emb": false,
+    "num_epochs": 1000,
+    "optimizer": "adamax",
+    "pretrained": "/home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl",
+    "random_seed": 92179,
+    "reactonly": true,
+    "reddit_folder": null,
+    "rm_long_contexts": false,
+    "rm_long_sent": false,
+    "stop_crit_num_epochs": -1,
+    "transformer_dim": 512,
+    "transformer_dropout": 0,
+    "transformer_n_heads": 8
+} ]
+07/29/2020 08:46:01 PM: [ Loading model /home/tmetz/w266_project/model_trained/model_revised_ed_emotion1.mdl ]
+07/29/2020 08:46:03 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 08:46:03 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpyvxrr82f ]
+07/29/2020 08:46:07 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 08:46:09 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 08:46:09 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmppk1rx6an ]
+07/29/2020 08:46:12 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 08:46:14 PM: [ loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz from cache at /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c ]
+07/29/2020 08:46:14 PM: [ extracting archive file /home/tmetz/.pytorch_pretrained_bert/a803ce83ca27fecf74c355673c434e51c265fb8a3e0e57ac62a80e38ba98d384.681017f415dfb33ec8d0e04fe51a619f3f01532ecea04edbfd48c5d160550d9c to temp dir /tmp/tmpo_a93yne ]
+07/29/2020 08:46:18 PM: [ Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+ ]
+07/29/2020 08:46:29 PM: [ Validating on the valid set -unshuffled ]
+07/29/2020 08:47:30 PM: [ Processing candidate top-K ]
+07/29/2020 08:47:31 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.697 | batch P@1 = 39.18 % | P@1,100 = 46.11% | P@3,100 = 77.74% | P@10,100 = 94.23% | valid time = 62.33 (s) ]
+07/29/2020 08:47:31 PM: [ Validating on the hidden test set -unshuffled ]
+07/29/2020 08:48:35 PM: [ Processing candidate top-K ]
+07/29/2020 08:48:37 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 2.677 | batch P@1 = 39.06 % | P@1,100 = 45.87% | P@3,100 = 78.19% | P@10,100 = 94.23% | valid time = 65.27 (s) ]
+07/29/2020 08:48:44 PM: [ Validating on the valid set -shuffle ]
+07/29/2020 08:49:53 PM: [ Processing candidate top-K ]
+07/29/2020 08:49:54 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.931 | batch P@1 = 53.00 % | P@1,100 = 64.26% | P@3,100 = 83.30% | P@10,100 = 94.96% | valid time = 69.90 (s) ]
+07/29/2020 08:49:54 PM: [ Validating on the hidden test set -shuffle ]
+07/29/2020 08:51:00 PM: [ Processing candidate top-K ]
+07/29/2020 08:51:01 PM: [ Valid (shuffled): Epoch = 0 | avg loss = 1.975 | batch P@1 = 51.76 % | P@1,100 = 63.37% | P@3,100 = 82.87% | P@10,100 = 95.42% | valid time = 67.22 (s) ]
