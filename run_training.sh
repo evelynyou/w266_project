@@ -12,12 +12,22 @@ PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained
 #MODEL_NAME='model_revised_ed_selfeval'
 
 #base dataset
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
-#MODEL_NAME='model_base_ed'
+EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
+MODEL_NAME='model_base_ed'
 
 #dataset cleaned for bad rows
-EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_cleaned'
-MODEL_NAME='model_revised_ed_cleaned'
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_cleaned'
+#MODEL_NAME='model_revised_ed_cleaned'
+
+#dataset reduced for emotions-87%
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_emotion1'
+#MODEL_NAME='model_revised_ed_emotion1'
+
+#dataset reduced for emotions-57%
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_emotion2'
+#MODEL_NAME='model_revised_ed_emotion2'
+
+
 
 
 python /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
@@ -35,6 +45,6 @@ python /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
 --model bert \
 --model-dir ${TRAIN_SAVE_FOLDER} \
 --model-name ${MODEL_NAME} \
---num-epochs 4 \
+--num-epochs 8 \
 --optimizer adamax \
 --stop-crit-num-epochs 10
