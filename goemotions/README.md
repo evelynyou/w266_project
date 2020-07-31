@@ -5,13 +5,23 @@ This is based on https://github.com/google-research/google-research/tree/master/
 
 
 ### Fine-tuning BERT using GoEmotions dataset
+Use `environment.yml` to install proper TensorFlow 1 environment.
+
+```conda activate emotion```
+
+Original code was modified in a number of places to allow it to run on less capable GPU.
+
 ```python -m goemotions.bert_classifier```
    
-within goemotions folder
-stores test results in data\processed folder
-folder structure manually described in bert_classifier.py
-conda activate emotion
-(uses environment configured around tf1)
+We confirmed that fine-tuned model had similar classification accuracy on test set as referenced in original Demszky paper (see `/model/test.tsv.eval_results.txt`).
+
+### Running fine-tuned model on ED dataset
+We modified bert_classifier.py to reference proper folder structure.
+
+We converted the EmpatheticDialogues dataset into appropriate format (`w266-project/data/ed_for_goemotions.tsv`)
+
+Stores test results in `w266-project/data/processed` folder
+
 
 run from ~/w266_project/goemotions
 ed_for_goemotions.tsv
