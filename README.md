@@ -6,7 +6,7 @@ Travis Metz and Evelyn You - August 2020
 
 This project draws heavily from the work done by Rashkin et al:
 
-    https://github.com/facebookresearch/EmpatheticDialogues/blob/master/README.md
+    https://github.com/facebookresearch/EmpatheticDialogues
 
     https://arxiv.org/abs/1811.00207
 

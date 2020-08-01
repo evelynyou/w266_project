@@ -9,9 +9,12 @@ PRETRAINED_MODEL_PATH='/home/tmetz/w266_project/model_pretrained/bert_pretrained
 #MODEL_NAME='model_revised_ed_selfeval'
 #MODEL_NAME='model_revised_ed_cleaned'
 #MODEL_NAME='model_revised_ed_emotion1'
-#MODEL_NAME='model_revised_ed_emotion2'
+MODEL_NAME='model_revised_ed_emotion2'
 #MODEL_NAME='model_revised_43_no_emotion'
-MODEL_NAME='model_revised_43_emotion
+#MODEL_NAME='model_revised_43_emotion'
+#MODEL_NAME='model_revised_random_87'
+#MODEL_NAME='model_revised_random_57'
+
 
 EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/empatheticdialogues'
 
