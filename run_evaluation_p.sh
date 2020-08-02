@@ -10,9 +10,12 @@ EVAL_SAVE_FOLDER='/home/tmetz/w266_project/model_trained'
 #MODEL_NAME='model_revised_ed_selfeval'
 #MODEL_NAME='model_revised_ed_cleaned'
 #MODEL_NAME='model_revised_ed_emotion1'
-#MODEL_NAME='model_revised_ed_emotion2'
+MODEL_NAME='model_revised_ed_emotion2'
 #MODEL_NAME='model_revised_43_no_emotion'
-MODEL_NAME='model_revised_43_emotion
+#MODEL_NAME='model_revised_43_emotion'
+#MODEL_NAME='model_revised_random_87'
+#MODEL_NAME='model_revised_random_57'
+
 
 # P@1,100
 python3 /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
