@@ -24,10 +24,24 @@ MODEL_NAME='model_base_ed'
 #MODEL_NAME='model_revised_ed_emotion1'
 
 #dataset reduced for emotions-57%
-#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_emotion2'
-#MODEL_NAME='model_revised_ed_emotion2'
+EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_emotion2'
+MODEL_NAME='model_revised_ed_emotion2'
 
+#43% of data with no emotion pattern
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_43_no_emotion'
+#MODEL_NAME='model_revised_43_no_emotion'
 
+#43% of data with emotion pattern
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_43_emotion'
+#MODEL_NAME='model_revised_43_emotion'
+
+#87% of data randomly selected
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_random_87'
+#MODEL_NAME='model_revised_random_87'
+
+#57% of data randomly selected
+#EMPATHETIC_DIALOGUES_DATA_FOLDER='/home/tmetz/w266_project/data/ed_revised_random_57'
+#MODEL_NAME='model_revised_random_57'
 
 
 python /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
@@ -45,6 +59,6 @@ python /home/tmetz/w266_project/EmpatheticDialogues/retrieval_train.py \
 --model bert \
 --model-dir ${TRAIN_SAVE_FOLDER} \
 --model-name ${MODEL_NAME} \
---num-epochs 8 \
+--num-epochs 4 \
 --optimizer adamax \
 --stop-crit-num-epochs 10
