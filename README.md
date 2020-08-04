@@ -2,13 +2,13 @@
 #### MIDS Program - University of California, Berkeley - W266 Final Project
 Travis Metz and Evelyn You - August 2020
 
-[add pdf of paper to repo]
+Link to presentation regarding project:  https://docs.google.com/presentation/d/1Q8zM_8cfGsrDESMYnxt_Ct7taZYEc7WuQE7AAnJkYus/edit?usp=sharing
 
 This project draws heavily from the work done by Rashkin et al:
 
-    https://github.com/facebookresearch/EmpatheticDialogues
+https://github.com/facebookresearch/EmpatheticDialogues
 
-    https://arxiv.org/abs/1811.00207
+https://arxiv.org/abs/1811.00207
 
 We started with their code base and worked from there.
 
